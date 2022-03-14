@@ -223,7 +223,10 @@ class SearchBar<T> extends StatefulWidget {
     this.searchBarController,
     this.minimumChars = 3,
     this.debounceDuration = const Duration(milliseconds: 500),
-    this.loader = const Center(child: CircularProgressIndicator()),
+    this.loader = const Center(
+        child: CircularProgressIndicator(
+      color: Colors.grey,
+    )),
     this.onError,
     this.emptyWidget = const SizedBox.shrink(),
     this.header,
@@ -409,7 +412,7 @@ class _SearchBarState<T> extends State<SearchBar<T?>>
                           ),
                         ),
                         data: Theme.of(context).copyWith(
-                          primaryColor: widget.iconActiveColor,
+                          primaryColor: Colors.grey,
                         ),
                       ),
                     ),
